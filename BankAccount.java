@@ -1,6 +1,5 @@
 package p4_2;
-import java.security.PublicKey;
-import java.util.Date;
+import p4_1.Date;
 
 	public class BankAccount {
 	    private String name;
@@ -51,7 +50,13 @@ import java.util.Date;
 	    }
 
 	    
-	    public String getyear() {
+	    public String getInfo() {
 	        return "ชื่อบัญชี: " + this.name + ", วันที่เปิดบัญชี: " ;
 	    }
+
+
+		public double property() {
+			
+			return amount;
+		}
 	}

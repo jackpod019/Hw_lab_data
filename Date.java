@@ -6,7 +6,14 @@ public class Date {
 	private int day;
 	private int mount;
 	private int year;
-	
+	public Date(int d,int m,int y) {
+		day=d;
+		mount=m;
+		year=y;
+	}
+	public Date() {
+		
+	}
 	public int getday() {
 		return day;
 	}
