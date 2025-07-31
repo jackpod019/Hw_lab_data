@@ -1,0 +1,45 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Maindate",
+      "request": "launch",
+      "mainClass": "Maindate",
+      "projectName": "Hw_lab_data_ceb30304"
+    },
+    {
+      "type": "java",
+      "name": "MainBank",
+      "request": "launch",
+      "mainClass": "MainBank",
+      "projectName": "Hw_lab_data_ceb30304"
+    },
+    {
+      "type": "java",
+      "name": "MainBnak",
+      "request": "launch",
+      "mainClass": "MainBnak",
+      "projectName": "Hw_lab_data_ceb30304"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "c:/Users/JackPod/Hw_lab_data",
+      "program": "c:/Users/JackPod/Hw_lab_data/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}

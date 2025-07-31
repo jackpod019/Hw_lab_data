@@ -1,8 +1,5 @@
-package p4_2;
 
-import p4_1.Date;
-
-public class Main {
+public class MainBank {
 
 	public static void main(String[] args) {
 		BankAccount q1 =new BankAccount("i");
