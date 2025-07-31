@@ -36,6 +36,23 @@ void printChain() {
     }
 }
 
+
+int search_item(int x)
+{
+    int index = x % Size;
+    struct node *temp = hash_table[index];
+    int pos = 0;
+
+    while (temp != NULL) {
+        if (temp->data == x)
+            return pos;  // เจอที่ตำแหน่ง pos
+        temp = temp->next;
+        pos++;
+    }
+
+    return -1;  // ไม่เจอ
+}
+
 int main() {
     int i;
 
@@ -63,5 +80,7 @@ int main() {
     printf("\nAfter inserting 49 and 24:\n");
     printChain();
 
+    printf("%d\n", search_item(15));  // เจอ => ควรแสดง 1 (เพราะ insert ที่ head)
+    printf("%d\n", search_item(50));  // ไม่เจอ => -1
     return 0;
 }
