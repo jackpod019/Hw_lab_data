@@ -1,0 +1,72 @@
+#include <stdio.h>
+#include <stdbool.h> 
+#include <stdlib.h>
+
+typedef struct Node { 
+    int data;
+    struct Node* next;
+} Node;
+
+Node *Top = NULL;
+
+bool isEmpty() { 
+if (Top ==NULL)  
+       return true; 
+return false;  
+}
+
+int pop() {
+    if (isEmpty()) {
+        printf("Underflow\n");
+        return -1;
+    } else {
+        Node *ptr = Top;
+        int value = ptr->data;
+        Top = Top->next;
+        free(ptr);
+        return value;
+    }
+}
+
+int peek() {
+    if (isEmpty()) {
+        printf("Underflow\n");
+        return -1;
+    }
+    return Top->data;
+}
+
+void push(int data) {
+    Node *new_node = (Node*)malloc(sizeof(Node));
+    new_node->data = data;
+    new_node->next = Top;
+    Top = new_node;
+}
+
+void display() {
+    if (isEmpty()) {
+        printf("Underflow\n");
+    } else {
+        Node *ptr = Top;
+        while (ptr != NULL) {
+            printf("%d\n", ptr->data);
+            ptr = ptr->next;
+        }
+    }
+}
+
+int main() {
+    push(10);
+    push(20);
+    push(30);
+
+    display();
+
+    printf("Top of stack: %d\n", peek());
+
+    printf("Pop: %d\n", pop());
+
+    display();
+
+    return 0;
+}
